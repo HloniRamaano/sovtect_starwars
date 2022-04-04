@@ -1,19 +1,26 @@
 {
-  "name": "spacex_launch_stats",
+  "name": "starwars_sovtec",
   "version": "1.0.0",
-  "description": "App that lists SpaceX launch missions",
+  "description": "App that lists the warriors of Star Wars",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Lehlohonolo Ramaano",
   "license": "ISC",
   "dependencies": {
+    "@apollo/client": "^3.5.10",
+    "apollo-link-rest": "^0.9.0-rc.1",
     "axios": "^0.26.1",
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
     "express": "^4.17.3",
     "express-graphql": "^0.12.0",
-    "graphql": "^16.3.0"
+    "graphql": "^16.3.0",
+    "qs": "^6.10.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
